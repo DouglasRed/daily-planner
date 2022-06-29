@@ -70,7 +70,20 @@ textarea {
   color: white;
 }
 
-.saveBtn i:hover {
+.saveBtn:hover {
   font-size: 20px;
+  background-color: #35d4f8;
+  border: 1px solid #35d4f8;
   transition: all 0.3s ease-in-out;
+}
+
+.saveBtn:active {
+  font-size: 20px;
+  background-color: #77dd77;
+  border-left: 1px solid #77dd77;
+  transition: all 0.3s ease-in-out;
+}
+
+.activity-input {
+  text-align: left;
 }
