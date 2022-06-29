@@ -33,7 +33,9 @@ function simpleCalendar() {
       var activityId = document.getElementsByClassName("activity-input");
       for (i = 0; i < activityId.length; i++) {
         activityId[i].id = "activity-field-" + (i + 1);
+        activityId[i].hour = i + 8;
       }
+      console.dir(activityId);
     }
     addActivityId();
 
@@ -69,14 +71,105 @@ function simpleCalendar() {
 
     var storeActivity;
 
+    //Button 1
     $(saveBtnId1).on("click", function (event) {
       event.preventDefault();
-      // alert("Item saved");
       var activityId1 = $("#activity-field-1").val().trim();
       localStorage.setItem("activity-1", activityId1);
     });
     var saveActivity1 = localStorage.getItem("activity-1");
     activityId1.val(saveActivity1);
+
+    //Button 2
+    $(saveBtnId2).on("click", function (event) {
+      event.preventDefault();
+      var activityId2 = $("#activity-field-2").val().trim();
+      localStorage.setItem("activity-2", activityId2);
+    });
+    var saveActivity2 = localStorage.getItem("activity-2");
+    activityId2.val(saveActivity2);
+
+    //Button 3
+    $(saveBtnId3).on("click", function (event) {
+      event.preventDefault();
+      var activityId3 = $("#activity-field-3").val().trim();
+      localStorage.setItem("activity-3", activityId3);
+    });
+    var saveActivity3 = localStorage.getItem("activity-3");
+    activityId3.val(saveActivity3);
+
+    //Button 4
+    $(saveBtnId4).on("click", function (event) {
+      event.preventDefault();
+      var activityId4 = $("#activity-field-4").val().trim();
+      localStorage.setItem("activity-4", activityId4);
+    });
+    var saveActivity4 = localStorage.getItem("activity-4");
+    activityId4.val(saveActivity4);
+
+    //Button 5
+    $(saveBtnId5).on("click", function (event) {
+      event.preventDefault();
+      var activityId5 = $("#activity-field-5").val().trim();
+      localStorage.setItem("activity-5", activityId5);
+    });
+    var saveActivity5 = localStorage.getItem("activity-5");
+    activityId5.val(saveActivity5);
+
+    //Button 6
+    $(saveBtnId6).on("click", function (event) {
+      event.preventDefault();
+      var activityId6 = $("#activity-field-6").val().trim();
+      localStorage.setItem("activity-6", activityId6);
+    });
+    var saveActivity6 = localStorage.getItem("activity-6");
+    activityId6.val(saveActivity6);
+
+    //Button 7
+    $(saveBtnId7).on("click", function (event) {
+      event.preventDefault();
+      var activityId7 = $("#activity-field-7").val().trim();
+      localStorage.setItem("activity-7", activityId7);
+    });
+    var saveActivity7 = localStorage.getItem("activity-7");
+    activityId7.val(saveActivity7);
+
+    //Button 8
+    $(saveBtnId8).on("click", function (event) {
+      event.preventDefault();
+      var activityId8 = $("#activity-field-8").val().trim();
+      localStorage.setItem("activity-8", activityId8);
+    });
+    var saveActivity9 = localStorage.getItem("activity-9");
+    activityId8.val(saveActivity9);
+
+    //Button 9
+    $(saveBtnId9).on("click", function (event) {
+      event.preventDefault();
+      var activityId9 = $("#activity-field-9").val().trim();
+      localStorage.setItem("activity-9", activityId9);
+    });
+    var saveActivity9 = localStorage.getItem("activity-9");
+    activityId9.val(saveActivity9);
+
+    //Button 10
+    $(saveBtnId10).on("click", function (event) {
+      event.preventDefault();
+      var activityId10 = $("#activity-field-10").val().trim();
+      localStorage.setItem("activity-10", activityId10);
+    });
+    var saveActivity10 = localStorage.getItem("activity-10");
+    activityId10.val(saveActivity10);
+
+    let now = new Date().getHours();
+
+    if (now > 8) {
+      $("#activity-field-1").addClass("past");
+    } else if (now >= 8 && now < 9) {
+      $("#activity-field-1").addClass("present");
+    } else if (now < 8) {
+      $("#activity-field-1").addClass("future");
+    }
   });
 }
 simpleCalendar();
