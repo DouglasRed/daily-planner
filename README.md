@@ -12,4 +12,6 @@ To download my code, you can access my github page at https://github.com/Douglas
 
 (./assets/css/images/work-day-scheduler.jpg)
 
-### Special thanks to Xandromus @ https://github.com/coding-boot-camp/super-disco for the starter code. He was a collaborator.
+### Credit
+
+Special thanks to Xandromus @ https://github.com/coding-boot-camp/super-disco for the starter code. He was a collaborator.
