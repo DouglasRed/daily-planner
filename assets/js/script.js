@@ -145,8 +145,8 @@ function simpleCalendar() {
       var activityId8 = $("#activity-field-8").val().trim();
       localStorage.setItem("activity-8", activityId8);
     });
-    var saveActivity9 = localStorage.getItem("activity-9");
-    activityId8.val(saveActivity9);
+    var saveActivity8 = localStorage.getItem("activity-8");
+    activityId8.val(saveActivity8);
 
     //Button 9
     $(saveBtnId9).on("click", function (event) {
